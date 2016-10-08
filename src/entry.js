@@ -9,7 +9,7 @@ var Entry = React.createClass({
 	btnEnterClick: function() {
 		var me = this; 
 
-		$('.test').loadingOverlay();
+		$('body').loadingOverlay();
 
 		//$('.test').loadingOverlay('remove');
 
