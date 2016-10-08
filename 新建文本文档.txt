@@ -6,3 +6,7 @@ npm install--save-dev react react-dom
 
 npm install less-loader less --save-dev 
 npm install less --save-dev
+
+.woff font/x-woff
+.woff2 font/x-woff2
+.ttf application/octet-stream
