@@ -7,9 +7,9 @@ var $ = require('jquery');
 require('./LoadMask');
 var Entry = React.createClass({
 	btnEnterClick: function() {
-		var me = this; 
+		var me = this;
 
-		$('body').loadingOverlay();
+		$('#wrapper').loadingOverlay();
 
 		//$('.test').loadingOverlay('remove');
 
@@ -28,6 +28,7 @@ var Entry = React.createClass({
 	}
 
 });
+
 ReactDOM.render(
 	<Entry/>,
 	document.querySelector('#wrapper')
