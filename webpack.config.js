@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 module.exports = {
-    entry: './entry.js',
+    entry: './src/entry.js',
     output: {
         filename: 'bundle.js'
     },
@@ -10,7 +10,10 @@ module.exports = {
             test: /\.js[x]?$/,
             exclude: /node_modules/,
             loader: 'babel-loader?presets[]=es2015&presets[]=react'
-        }, ]
+        }, {
+            test: /\.less$/,
+            loader: "style!css!less"
+        }, { test: /\.css$/, loader: 'style-loader!css-loader' }]
     },
     plugins: [
         new webpack.DefinePlugin({

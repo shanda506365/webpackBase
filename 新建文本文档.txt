@@ -3,3 +3,6 @@ npm install babel-loader babel-core babel-preset-es2015 babel-preset-react  --sa
 webpack --progress --colors --watch
 
 npm install--save-dev react react-dom
+
+npm install less-loader less --save-dev 
+npm install less --save-dev
