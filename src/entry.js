@@ -10,6 +10,24 @@ require("!style!css!less!../less/loadmask.less");
 
 require('../node_modules/bootstrap/dist/js/bootstrap.min');
 
+class Point{
+	constructor(x,y) {
+	   this.x=x;
+	   this.y=y;
+	}
+	toString(){
+		return `(${this.x},${this.y})`;
+	}
+}
+class ColorPoint extends Point{
+	constructor(x,y,color) {
+	  super(x,y);
+	  this.color = color;
+	}
+	toString(){ 
+		return `${this.color} ${super.toString()}`;
+	}
+}
 var Entry = React.createClass({
 	btnEnterClick: function() {
 		var me = this;
@@ -20,7 +38,9 @@ var Entry = React.createClass({
 
 	},
 	componentDidMount: function() {
-		alert(content);
+		console.log(content);
+		var temp = new ColorPoint(2,3,'red');
+		console.log(temp.toString());
 	},
 	render: function() {
 		var me = this;
