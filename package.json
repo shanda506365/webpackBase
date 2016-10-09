@@ -28,7 +28,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
-    "bootstrap","^3.3.0"
+    "bootstrap":"^3.3.0"
   },
   "devDependencies": {
     "exports-loader": "^0.6.3",
