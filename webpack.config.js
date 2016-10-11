@@ -33,7 +33,20 @@ module.exports = {
             compress: {
                 warnings: false
             }
-        })
+        }),
+        new CommonsChunkPlugin(({
+            name: "common.js",
+            // (the commons chunk name)
+
+            filename: "common.js",
+            // (the filename of the commons chunk)
+
+            // minChunks: 3,
+            // (Modules must be shared between 3 entries)
+
+            // chunks: ["pageA", "pageB"],
+            // (Only use these entries)
+        }))
     ]
 
 };
