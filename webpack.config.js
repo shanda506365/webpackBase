@@ -1,9 +1,13 @@
 var webpack = require('webpack');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports = {
-    entry:  ['./src/entry.js'],
+    entry: {
+        'entry': './src/entry.js'
+    },
     output: {
-        filename: 'bundle.js'
+        path: __dirname + '/bundle',
+        filename: '[name].js'
     },
     module: {
         loaders: [{
