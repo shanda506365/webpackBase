@@ -45,7 +45,7 @@ var Entry = React.createClass({
 		//解构赋值
 		var [ab,ac] = [1,2];
 		console.log(ab+'-'+ac);
-		//map字典
+		//map字典 IeNo
 		var map = new Map();
 		map.set('11','aa');
 		map.set('22','cc');
@@ -74,21 +74,26 @@ var Entry = React.createClass({
 			return re?re.length:0;
 		}
 		console.log(s.length+'--'+codePointLength(s));
+		var ss = "Hello World!";
+		console.log(ss.startsWith("Hello"));
+		console.log(ss.endsWith("!"));
+		//console.log(ss.contains("o"));
+		console.log(ss.repeat(3));
 	},
 	render: function() {
 		var me = this;
 		return (
 			<div className='test'>
-				<h1>Hello, world!</h1>
+				<h1>显示一下</h1>
 				<input type="button" className='btn btn-success' value='button' onClick={me.btnEnterClick}/>
 				<br/>
 				<button type="button" className="btn btn-default btn-lg">
-				  <span className="glyphicon glyphicon-star"></span> Star
+				  <span className="glyphicon glyphicon-star"></span> 赞
 				</button>
-				<button id='element' type="button" className="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+				<button id='element' type="button" className="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">提示？</button>
 				 
 				<button type="button" className="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-				  Launch demo modal
+				 打开窗口
 				</button>
 
 				 
@@ -96,15 +101,15 @@ var Entry = React.createClass({
 				  <div className="modal-dialog">
 				    <div className="modal-content">
 				      <div className="modal-header">
-				        <button type="button" className="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span className="sr-only">Close</span></button>
-				        <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+				        <button type="button" className="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span className="sr-only">关闭</span></button>
+				        <h4 className="modal-title" id="myModalLabel">标题</h4>
 				      </div>
 				      <div className="modal-body">
 				        ...
 				      </div>
 				      <div className="modal-footer">
-				        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-				        <button type="button" className="btn btn-primary">Save changes</button>
+				        <button type="button" className="btn btn-default" data-dismiss="modal">关闭</button>
+				        <button type="button" className="btn btn-primary">保存</button>
 				      </div>
 				    </div>
 				  </div>
